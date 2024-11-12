@@ -6,6 +6,8 @@ compose = "1.5.4"
 compose-material3 = "1.1.2"
 androidx-activityCompose = "1.8.0"
 kotlinGradlePlugin = "1.5.31"
+datetime = "0.6.0"
+napier = "2.7.1"
 
 [libraries]
 gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
@@ -17,6 +19,8 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = 
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime" }
+napier-logging = { module = "io.github.aakira:napier", version.ref = "napier"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

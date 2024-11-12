@@ -36,6 +36,8 @@ kotlin {
         commonMain.dependencies {
             //put your multiplatform dependencies here
 
+            implementation(libs.napier.logging)
+            implementation(libs.kotlinx.datetime)
         }
 
 
