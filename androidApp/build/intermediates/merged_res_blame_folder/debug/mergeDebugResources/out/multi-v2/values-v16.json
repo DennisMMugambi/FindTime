@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.dennismugambi.findtime.android.androidApp-mergeDebugResources-41:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/dennis/.gradle/caches/8.9/transforms/277da63269cb3e08650d2db99e6e875d/transformed/core-1.10.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}
