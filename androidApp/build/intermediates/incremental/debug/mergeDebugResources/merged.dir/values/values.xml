@@ -151,6 +151,7 @@
     <string name="dialog">"Dialog"</string>
     <string name="dropdown_menu">"Dropdown menu"</string>
     <string name="expanded">Expanded</string>
+    <string name="findmeeting">Find Meeting</string>
     <string name="in_progress">In progress</string>
     <string name="indeterminate">Partially checked</string>
     <string name="m3c_bottom_sheet_pane_title">Bottom Sheet</string>
@@ -182,6 +183,7 @@
     <string name="time_picker_pm">PM</string>
     <string name="tooltip_long_press_label">Show tooltip</string>
     <string name="tooltip_pane_description">Tooltip</string>
+    <string name="world_clocks">World Clocks</string>
     <style name="AppTheme" parent="android:Theme.Material.NoActionBar"/>
     <style name="DialogWindowTheme">
         <item name="android:windowClipToOutline">false</item>

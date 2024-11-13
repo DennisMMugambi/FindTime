@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="findmeeting">Find Meeting</string>
+    <string name="world_clocks">World Clocks</string>
     <style name="AppTheme" parent="android:Theme.Material.NoActionBar"/>
 </resources>
