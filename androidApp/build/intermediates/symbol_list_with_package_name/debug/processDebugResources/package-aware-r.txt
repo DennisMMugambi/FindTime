@@ -208,6 +208,7 @@ string default_popup_window_title
 string dialog
 string dropdown_menu
 string expanded
+string findmeeting
 string in_progress
 string indeterminate
 string m3c_bottom_sheet_pane_title
@@ -239,6 +240,7 @@ string time_picker_period_toggle_description
 string time_picker_pm
 string tooltip_long_press_label
 string tooltip_pane_description
+string world_clocks
 style AppTheme
 style DialogWindowTheme
 style FloatingDialogTheme
