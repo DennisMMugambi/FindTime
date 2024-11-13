@@ -114,12 +114,15 @@ fun MainView(actionBarFun: topBarFun = { EmptyComposable() }) {
             }
         ) { innerPadding ->
             // TODO: Replace with Dialog
-            // TODO: Replace with screens
 
             Column(
                 modifier = Modifier.padding(innerPadding)
             ) {
 
+                when (selectedIndex.value) {
+                    0 -> TimeZoneScreen(currentTimeZoneStrings)
+                    //1 -> FindTimeScreen()
+                }
             }
         }
     }
