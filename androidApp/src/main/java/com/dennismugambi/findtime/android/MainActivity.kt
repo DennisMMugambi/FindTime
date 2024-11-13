@@ -8,19 +8,17 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.dennismugambi.findtime.android.theme.AppTheme
+import io.github.aakira.napier.DebugAntilog
+import io.github.aakira.napier.Napier
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        Napier.base(DebugAntilog())
         setContent {
-            MyApplicationTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    GreetingView("Hello, Android!")
-                }
-            }
+            Text("Test")
         }
     }
 }
@@ -33,7 +31,7 @@ fun GreetingView(text: String) {
 @Preview
 @Composable
 fun DefaultPreview() {
-    MyApplicationTheme {
+    AppTheme {
         GreetingView("Hello, Android!")
     }
 }
