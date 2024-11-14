@@ -1,12 +1,12 @@
 package com.dennismugambi.findtime.android.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Place
-import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import com.dennismugambi.findtime.android.components.AddTimeZoneDialog
 import com.dennismugambi.findtime.android.theme.AppTheme
 
 sealed class Screen(val title: String) {
@@ -113,15 +114,32 @@ fun MainView(actionBarFun: topBarFun = { EmptyComposable() }) {
 
             }
         ) { innerPadding ->
-            // TODO: Replace with Dialog
+
+            if (showAddDialog.value) {
+                AddTimeZoneDialog(
+
+                    onAdd = { newTimeZones ->
+                        showAddDialog.value = false
+                        for (zone in newTimeZones) {
+                            if(!currentTimeZoneStrings.contains(zone)) {
+                                currentTimeZoneStrings.add(zone)
+                            }
+                        }
+                    },
+                    onDismiss = {
+                        showAddDialog.value = false
+                    }
+                )
+            }
 
             Column(
                 modifier = Modifier.padding(innerPadding)
+                .background(Color.White)
             ) {
 
                 when (selectedIndex.value) {
                     0 -> TimeZoneScreen(currentTimeZoneStrings)
-                    //1 -> FindTimeScreen()
+                    1 -> FindMeetingScreen(currentTimeZoneStrings)
                 }
             }
         }

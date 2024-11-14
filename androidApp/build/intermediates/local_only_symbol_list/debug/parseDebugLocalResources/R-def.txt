@@ -1,5 +1,8 @@
 R_DEF: Internal format may change without notice
 local
+string add
+string cancel
+string done
 string findmeeting
 string world_clocks
 style AppTheme

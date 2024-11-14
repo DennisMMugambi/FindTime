@@ -33,14 +33,21 @@ class TimeZoneHelperImpl: TimeZoneHelper {
 
     override fun hoursFromTimeZone(otherTimeZoneId: String): Double {
 
-        val currentTimeZone = TimeZone.currentSystemDefault()
-        val currentUTCInstant: Instant = Clock.System.now()
-        val otherTimeZone = TimeZone.of(otherTimeZoneId)
-        val currentDateTime: LocalDateTime = currentUTCInstant.toLocalDateTime(currentTimeZone)
-        // 5
-        val currentOtherDateTime: LocalDateTime = currentUTCInstant.toLocalDateTime(otherTimeZone)
-        // 6
-        return abs((currentDateTime.hour - currentOtherDateTime.hour) * 1.0)
+        try {
+            val currentTimeZone = TimeZone.currentSystemDefault()
+            val currentUTCInstant: Instant = Clock.System.now()
+            val otherTimeZone = TimeZone.of(otherTimeZoneId)
+            val currentDateTime: LocalDateTime = currentUTCInstant.toLocalDateTime(currentTimeZone)
+            // 5
+            val currentOtherDateTime: LocalDateTime =
+                currentUTCInstant.toLocalDateTime(otherTimeZone)
+
+            return abs((currentDateTime.hour - currentOtherDateTime.hour) * 1.0)
+        } catch ( e: Exception) {
+            print("Invalid time zone passed ${otherTimeZoneId} throwing error ${e.message}")
+            Napier.d("Invalid time zone passed ${otherTimeZoneId} throwing error ${e.message}")
+            return 0.0
+        }
     }
 
     override fun getTime(timeZoneId: String): String {
